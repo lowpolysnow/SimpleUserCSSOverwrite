@@ -1,0 +1,29 @@
+# 配布パッケージ作成
+name: create-artifact
+
+on:
+  # 手動実行
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Ubuntuで実行
+    runs-on: ubuntu-latest
+    steps:
+      # $GITHUB_WORKSPACE上へチェックアウト
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 全タグ・ブランチ・履歴をdepth:0で取得
+
+      # npmモジュールをインストールして、gulp実行
+      - name: Install npm modules and Run gulp
+        run: |
+          npm install
+          gulp
+
+      # Artifactを生成(＆zip圧縮)して、Actionページへアップロード
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: SimpleUserCSSOverwrite
+          path: ./dist/chrome/

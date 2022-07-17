@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Popup</title>
+  <link rel="stylesheet" type="text/css" href="../styles/popup.css">
+</head>
+<body>
+  <div class="save-load-container">
+    <div class="subcontainer">
+      <div class="caption">Save & load with Storage</div>
+    <div class="subcontainer">
+      <div style="display: inline;">edited:</div>
+      <div style="display: inline; color: #FF0000; font-weight: bold;" class="message" id="message"></div>
+    </div>
+    <div class="subcontainer">
+      <div style="display: inline;"><button class="save" id="save">[Save] popup > Storage</button></div>
+      <div style="display: inline;"><button class="reload_setting" id="load">[Reload] Storage > popup</button></div>
+    </div>
+  </div>
+  <div class="changecss-container">
+    <div class="subcontainer">
+      <div class="caption">Change CSS to current tab</div>
+    </div>
+    <div class="subcontainer">
+      <div style="display: inline;"><button class="apply_from_saved" id="reload_setting">[Apply] Strorage > tab</button></div>
+    </div>
+  </div>
+  <div class="io-container">
+    <div class="subcontainer">
+      <div class="caption">Setting IO & commands</div>
+    </div>
+    <div class="subcontainer">
+      <div style="display: inline;"><button class="export" id="export">[Export] Storage > Setting IO</button></div>
+      <div style="display: inline;"><button class="import" id="import">[Import] Setting IO > popup</button></div>
+    </div>
+    <div class="subcontainer">
+      <div style="display: inline; vertical-align: top;">Setting IO</div>
+      <div style="display: inline;"><textarea cols="30" rows="2" class="settingio" id="settingio"></textarea></div>
+    </div>
+  </div>
+  <div class="table">
+    <div class="table-caption">
+      <div class="table-cell">apply</div>
+      <div class="table-cell">name</div>
+      <div class="table-cell">URL pattern</div>
+      <div class="table-cell"></div><!-- copybuttoncol -->
+      <div class="table-cell">CSS</div>
+      <div class="table-cell"></div><!-- copybuttoncol -->
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell"><input type="checkbox" class="apply" id="apply"></input></div>
+      <div class="table-cell"><input type="text" class="name" id="name" size="10"></input></div>
+      <div class="table-cell"><input type="text" class="url" id="url" size="5"></input></div>
+      <div class="table-cell"><button class="copy_url" id="copy_url">cp</button></div>
+      <div class="table-cell"><textarea cols="10" rows="1" class="css" id="css"></textarea></div>
+      <div class="table-cell"><button class="copy_css" id="copy_css">cp</button></div>
+    </div>
+  </div>
+  <script src="../scripts/popup.js"></script>
+</body>
+</html>

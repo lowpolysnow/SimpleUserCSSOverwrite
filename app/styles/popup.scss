@@ -1,0 +1,50 @@
+$solidColor: #666666;
+
+div{
+  &.save-load-container{
+    padding: 2px;
+    display: block;
+  }
+  &.changecss-container{
+    padding: 2px;
+    display: block;
+  }
+  &.io-container{
+    padding: 2px;
+    display: block;
+  }
+  &.subcontainer{
+    display: block;
+  }
+  &.caption{
+    font-weight: bold;
+  }
+}
+
+button{
+  &.copy_url{
+    margin-right: 10px;
+  }
+  &.copy_css{
+    margin-right: 10px;
+  }
+}
+
+div{  //table
+  &.table{
+    display: table;
+  }
+  &.table-caption{
+    font-weight: bold;
+    text-align: center;
+    display: table-row;
+  }
+  &.table-row{
+    display: table-row;
+  }
+  &.table-cell{
+    vertical-align: middle;
+    padding: 1px;
+    display: table-cell;
+  }
+}
